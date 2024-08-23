@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "serve",
-    "build": "node build.js",
+    "build": "node build.js && node copy-files.js",
     "watch": "node build.js --watch",
     "esbuild": "esbuild ./src/*.ts --bundle --sourcemap --outdir=dist --watch",
     "format": "prettier src/*.ts -w"
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@sygnal/sse": "^0.1.1",
+    "fs-extra": "^11.2.0",
     "glob": "^10.4.2",
     "gsap": "^3.12.5",
     "js-cookie": "^3.0.5"
